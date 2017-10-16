@@ -8,9 +8,9 @@ namespace Datos
 {
     public class DatosUsuario
     {
-        private TiendaElectronicaEntities tee;
+        private TiendaElectronicaEntities1 tee;
         public DatosUsuario() {
-            tee = new TiendaElectronicaEntities();
+            tee = new TiendaElectronicaEntities1();
         }
         // R
         public bool Autentificar(Usuario usuario)

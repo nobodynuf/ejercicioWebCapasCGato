@@ -13,10 +13,10 @@ namespace Datos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TiendaElectronicaEntities : DbContext
+    public partial class TiendaElectronicaEntities1 : DbContext
     {
-        public TiendaElectronicaEntities()
-            : base("name=TiendaElectronicaEntities")
+        public TiendaElectronicaEntities1()
+            : base("name=TiendaElectronicaEntities1")
         {
         }
     

@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TiendaElectronica.master.cs" Inherits="Vista.TiendaElectronica" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 200px;
+            height: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="width: 100%; height: 100px;text-align:center;">
+            <img alt="logo" class="auto-style1" longdesc="logo de la tienda de tecnologia chilevision" src="rsc/chv-logo.png" />
+
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    <p>
+        (c) MI PAGINA BACAN 2017</p>
+</body>
+</html>

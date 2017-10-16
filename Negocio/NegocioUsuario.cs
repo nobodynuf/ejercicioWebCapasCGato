@@ -18,7 +18,13 @@ namespace Negocio
 
         public bool Autentificar(Usuario us)
         {
-            return du.Autentificar(new Datos.Usuario() { contra = us.contra, usuario1 = us.usuario1 });
+            Datos.Usuario usuario = new Datos.Usuario()
+            {
+                contra = us.contra,
+                usuario1 = us.usuario1
+            };
+
+            return du.Autentificar(usuario);
 
         }
     }

@@ -10,25 +10,25 @@
             <PropertyRef Name="codigo" />
           </Key>
           <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="marca" Type="nchar" MaxLength="50" />
-          <Property Name="modelo" Type="nchar" MaxLength="50" />
-          <Property Name="tipo" Type="nchar" MaxLength="50" />
+          <Property Name="marca" Type="nvarchar" MaxLength="50" />
+          <Property Name="modelo" Type="nvarchar" MaxLength="50" />
+          <Property Name="tipo" Type="nvarchar" MaxLength="50" />
           <Property Name="precio" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="usuario" />
           </Key>
-          <Property Name="usuario" Type="nchar" MaxLength="30" Nullable="false" />
-          <Property Name="contra" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="usuario" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="contra" Type="nvarchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
             <PropertyRef Name="codigo" />
           </Key>
-          <Property Name="codigo" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="codigo" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="cod_producto" Type="int" Nullable="false" />
-          <Property Name="usr_venta" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="usr_venta" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="cantidad" Type="int" Nullable="false" />
           <Property Name="fecha" Type="date" Nullable="false" />
         </EntityType>
@@ -79,9 +79,9 @@
             <PropertyRef Name="codigo" />
           </Key>
           <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="marca" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="modelo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="tipo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="marca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="precio" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Venta" Relationship="Self.FK_Venta_Producto" FromRole="Producto" ToRole="Venta" />
         </EntityType>
@@ -89,17 +89,17 @@
           <Key>
             <PropertyRef Name="usuario1" />
           </Key>
-          <Property Name="usuario1" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="contra" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="usuario1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="contra" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Venta" Relationship="Self.FK_Venta_Usuario" FromRole="Usuario" ToRole="Venta" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
             <PropertyRef Name="codigo" />
           </Key>
-          <Property Name="codigo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="cod_producto" Type="Int32" Nullable="false" />
-          <Property Name="usr_venta" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="usr_venta" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="cantidad" Type="Int32" Nullable="false" />
           <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Producto" Relationship="Self.FK_Venta_Producto" FromRole="Venta" ToRole="Producto" />
@@ -129,7 +129,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TiendaElectronicaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TiendaElectronicaEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Producto" EntityType="Self.Producto" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="Venta" EntityType="Self.Venta" />
@@ -147,7 +147,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TiendaElectronicaModelStoreContainer" CdmEntityContainer="TiendaElectronicaEntities">
+        <EntityContainerMapping StorageEntityContainer="TiendaElectronicaModelStoreContainer" CdmEntityContainer="TiendaElectronicaEntities1">
           <EntitySetMapping Name="Producto">
             <EntityTypeMapping TypeName="TiendaElectronicaModel.Producto">
               <MappingFragment StoreEntitySet="Producto">

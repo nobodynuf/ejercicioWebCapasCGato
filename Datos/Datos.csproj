@@ -48,59 +48,57 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatosUsuario.cs" />
-    <Compile Include="ElectronicaModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElectronicaModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ElectronicaModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElectronicaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ElectronicaModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElectronicaModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Producto.cs">
-      <DependentUpon>ElectronicaModel.tt</DependentUpon>
+      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TiendaElectronicaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaElectronicaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiendaElectronicaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiendaElectronicaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>ElectronicaModel.tt</DependentUpon>
+      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Venta.cs">
-      <DependentUpon>ElectronicaModel.tt</DependentUpon>
+      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="ElectronicaModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ElectronicaModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="ElectronicaModel.edmx.diagram">
-      <DependentUpon>ElectronicaModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ElectronicaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ElectronicaModel.Context.cs</LastGenOutput>
-      <DependentUpon>ElectronicaModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="ElectronicaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ElectronicaModel.edmx</DependentUpon>
-      <LastGenOutput>ElectronicaModel.cs</LastGenOutput>
-    </Content>
+    <EntityDeploy Include="TiendaElectronicaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TiendaElectronicaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TiendaElectronicaModel.edmx.diagram">
+      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TiendaElectronicaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
+      <LastGenOutput>TiendaElectronicaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TiendaElectronicaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
+      <LastGenOutput>TiendaElectronicaModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
