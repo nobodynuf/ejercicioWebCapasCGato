@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosProducto.cs" />
     <Compile Include="DatosUsuario.cs" />
+    <Compile Include="DatosVentas.cs" />
     <Compile Include="Producto.cs">
       <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
     </Compile>

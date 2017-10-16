@@ -69,7 +69,11 @@
     <Content Include="TiendaElectronica.Master" />
     <Content Include="Intranet.sitemap" />
     <Content Include="Session.master" />
+    <Content Include="WebEliminarCodigo.aspx" />
+    <Content Include="WebIngresar.aspx" />
+    <Content Include="WebListarRango.aspx" />
     <Content Include="WebNavegacion.aspx" />
+    <Content Include="WebVentaYListado.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -98,6 +102,20 @@
     <Compile Include="TiendaElectronica.Master.designer.cs">
       <DependentUpon>TiendaElectronica.Master</DependentUpon>
     </Compile>
+    <Compile Include="WebEliminarCodigo.aspx.cs">
+      <DependentUpon>WebEliminarCodigo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebEliminarCodigo.aspx.designer.cs">
+      <DependentUpon>WebEliminarCodigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebIngresar.aspx.cs">
+      <DependentUpon>WebIngresar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebIngresar.aspx.designer.cs">
+      <DependentUpon>WebIngresar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebInicio.aspx.cs">
       <DependentUpon>WebInicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,12 +123,26 @@
     <Compile Include="WebInicio.aspx.designer.cs">
       <DependentUpon>WebInicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebListarRango.aspx.cs">
+      <DependentUpon>WebListarRango.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebListarRango.aspx.designer.cs">
+      <DependentUpon>WebListarRango.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebNavegacion.aspx.cs">
       <DependentUpon>WebNavegacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebNavegacion.aspx.designer.cs">
       <DependentUpon>WebNavegacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebVentaYListado.aspx.cs">
+      <DependentUpon>WebVentaYListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebVentaYListado.aspx.designer.cs">
+      <DependentUpon>WebVentaYListado.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
