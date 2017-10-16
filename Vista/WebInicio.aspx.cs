@@ -20,7 +20,7 @@ namespace Vista
             if (new NegocioUsuario().Autentificar(us))
             {
                 ((Vista.Session)this.Master).SessionUsuario = us;
-                Response.Redirect("~WebNavegacion.aspx");
+                Response.Redirect("WebNavegacion.aspx");
             }
             else
             {
