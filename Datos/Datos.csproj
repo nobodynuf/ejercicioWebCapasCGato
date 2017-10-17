@@ -51,7 +51,7 @@
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="DatosVentas.cs" />
     <Compile Include="Producto.cs">
-      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
+      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TiendaElectronicaModel.Context.cs">
@@ -69,11 +69,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="TiendaRecreadaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaRecreadaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiendaRecreadaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TiendaRecreadaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
+      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Venta.cs">
-      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
+      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +100,13 @@
     </EntityDeploy>
     <None Include="TiendaElectronicaModel.edmx.diagram">
       <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="TiendaRecreadaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TiendaRecreadaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TiendaRecreadaModel.edmx.diagram">
+      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +122,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
       <LastGenOutput>TiendaElectronicaModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="TiendaRecreadaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
+      <LastGenOutput>TiendaRecreadaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TiendaRecreadaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
+      <LastGenOutput>TiendaRecreadaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
