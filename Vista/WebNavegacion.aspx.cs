@@ -11,10 +11,7 @@ namespace Vista
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                Response.Write("BIEWNVEIO " + ((Vista.TiendaElectronica)this.Master).SessionUsuario.usuario1);
-            }
+            
         }
     }
 }

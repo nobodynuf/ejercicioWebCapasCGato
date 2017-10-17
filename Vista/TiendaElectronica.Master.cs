@@ -15,7 +15,7 @@ namespace Vista
             {
                 if (Session["usuario"] == null)
                 {
-                    Session["usuario"] = new Negocio.Usuario();
+                    throw new Exception("No logueado");
                 }
                 return (Negocio.Usuario)Session["usuario"];
             }
@@ -32,7 +32,17 @@ namespace Vista
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                try
+                {
+                    Response.Write("BIEWNVEIO " + SessionUsuario.usuario1);
+                }
+                catch (Exception)
+                {
+                    Response.Redirect("WebInicio.aspx", true);
+                }
+            }
         }
     }
 }
