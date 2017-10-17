@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,16 +10,16 @@ namespace Datos
     public class DatosProducto
     {
         // CRD
-        TiendaElectronicaEntities1 te;
+        TiendaElectronicaEntities2 te;
 
         public DatosProducto()
         {
-            te = new TiendaElectronicaEntities1();
+            te = new TiendaElectronicaEntities2();
         }
 
         public bool Crear(Producto producto)
         {
-            var lista = (from a in te.Producto select a).ToList();
+            var lista = (from a in te.Producto select a);
 
             foreach (Producto item in lista)
             {
@@ -39,7 +40,7 @@ namespace Datos
 
         public bool EliminarPorCodigo(int codigo)
         {
-            var lista = (from a in te.Producto select a).ToList();
+            List<Producto> lista = (from a in te.Producto select a).ToList();
 
             foreach (Producto item in lista)
             {

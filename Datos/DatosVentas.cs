@@ -8,10 +8,10 @@ namespace Datos
 {
     public class DatosVentas
     {
-        TiendaElectronicaEntities1 te;
+       TiendaElectronicaEntities2 te;
         public DatosVentas()
         {
-            te = new TiendaElectronicaEntities1();
+            te = new TiendaElectronicaEntities2();
         }
 
         public List<Venta> Listar()

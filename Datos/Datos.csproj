@@ -30,13 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Scaffolding.EntityFramework.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -51,87 +58,58 @@
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="DatosVentas.cs" />
     <Compile Include="Producto.cs">
-      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
+      <DependentUpon>TiendaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TiendaElectronicaModel.Context.cs">
+    <Compile Include="TiendaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TiendaElectronicaModel.Context.tt</DependentUpon>
+      <DependentUpon>TiendaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="TiendaElectronicaModel.cs">
+    <Compile Include="TiendaModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TiendaElectronicaModel.tt</DependentUpon>
+      <DependentUpon>TiendaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TiendaElectronicaModel.Designer.cs">
+    <Compile Include="TiendaModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="TiendaRecreadaModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TiendaRecreadaModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TiendaRecreadaModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TiendaRecreadaModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
+      <DependentUpon>TiendaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
+      <DependentUpon>TiendaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Venta.cs">
-      <DependentUpon>TiendaRecreadaModel.tt</DependentUpon>
+      <DependentUpon>TiendaModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="TiendaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TiendaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="packages.config" />
-    <EntityDeploy Include="TiendaElectronicaModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TiendaElectronicaModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="TiendaElectronicaModel.edmx.diagram">
-      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="TiendaRecreadaModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TiendaRecreadaModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="TiendaRecreadaModel.edmx.diagram">
-      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
+    <None Include="TiendaModel.edmx.diagram">
+      <DependentUpon>TiendaModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TiendaElectronicaModel.Context.tt">
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TiendaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
-      <LastGenOutput>TiendaElectronicaModel.Context.cs</LastGenOutput>
+      <DependentUpon>TiendaModel.edmx</DependentUpon>
+      <LastGenOutput>TiendaModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="TiendaElectronicaModel.tt">
+    <Content Include="TiendaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TiendaElectronicaModel.edmx</DependentUpon>
-      <LastGenOutput>TiendaElectronicaModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="TiendaRecreadaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
-      <LastGenOutput>TiendaRecreadaModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="TiendaRecreadaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TiendaRecreadaModel.edmx</DependentUpon>
-      <LastGenOutput>TiendaRecreadaModel.cs</LastGenOutput>
+      <DependentUpon>TiendaModel.edmx</DependentUpon>
+      <LastGenOutput>TiendaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

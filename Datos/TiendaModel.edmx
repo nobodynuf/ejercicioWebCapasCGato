@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TiendaElectronicaRecreadaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TiendaElectronicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Producto">
           <Key>
             <PropertyRef Name="codigo" />
@@ -56,7 +56,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TiendaElectronicaRecreadaModelStoreContainer">
+        <EntityContainer Name="TiendaElectronicaModelStoreContainer">
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
@@ -73,7 +73,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="TiendaElectronicaRecreadaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TiendaElectronicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Producto">
           <Key>
             <PropertyRef Name="codigo" />
@@ -129,7 +129,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TiendaElectronicaRecreadaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TiendaElectronicaEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Producto" EntityType="Self.Producto" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="Venta" EntityType="Self.Venta" />
@@ -147,9 +147,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TiendaElectronicaRecreadaModelStoreContainer" CdmEntityContainer="TiendaElectronicaRecreadaEntities">
+        <EntityContainerMapping StorageEntityContainer="TiendaElectronicaModelStoreContainer" CdmEntityContainer="TiendaElectronicaEntities2">
           <EntitySetMapping Name="Producto">
-            <EntityTypeMapping TypeName="TiendaElectronicaRecreadaModel.Producto">
+            <EntityTypeMapping TypeName="TiendaElectronicaModel.Producto">
               <MappingFragment StoreEntitySet="Producto">
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="marca" ColumnName="marca" />
@@ -160,7 +160,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="TiendaElectronicaRecreadaModel.Usuario">
+            <EntityTypeMapping TypeName="TiendaElectronicaModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="usuario1" ColumnName="usuario" />
                 <ScalarProperty Name="contra" ColumnName="contra" />
@@ -168,7 +168,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Venta">
-            <EntityTypeMapping TypeName="TiendaElectronicaRecreadaModel.Venta">
+            <EntityTypeMapping TypeName="TiendaElectronicaModel.Venta">
               <MappingFragment StoreEntitySet="Venta">
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="cantidad" ColumnName="cantidad" />
