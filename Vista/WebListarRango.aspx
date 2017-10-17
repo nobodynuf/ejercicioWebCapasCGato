@@ -9,12 +9,12 @@
         <tr>
             <td>Rango inferior</td>
             
-            <td><asp:TextBox ID="txtRMayor" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtRMenor" runat="server"></asp:TextBox></td>
             
         </tr>
         <tr>
             <td>Rango mayor</td>
-            <td><asp:TextBox ID="txtRMenor" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtRMayor" runat="server"></asp:TextBox></td>
         </tr>
         <tr>
             <td colspan="2">

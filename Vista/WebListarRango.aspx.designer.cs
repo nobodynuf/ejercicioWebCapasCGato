@@ -13,15 +13,6 @@ namespace Vista {
     public partial class WebListarRango {
         
         /// <summary>
-        /// Control txtRMayor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRMayor;
-        
-        /// <summary>
         /// Control txtRMenor.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace Vista {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRMenor;
+        
+        /// <summary>
+        /// Control txtRMayor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRMayor;
         
         /// <summary>
         /// Control btnGO.

@@ -68,7 +68,8 @@ namespace Negocio
         {
             List<Producto> lista = new List<Producto>();
             Negocio.Producto producto;
-            foreach (var item in dp.Listar(menor, mayor))
+
+            foreach (Datos.Producto item in dp.Listar(menor, mayor))
             {
                 producto = new Producto()
                 {

@@ -32,7 +32,8 @@ namespace Datos
             return true;
         }
 
-        public List<Producto> Listar() {
+        public List<Producto> Listar()
+        {
             return (from a in te.Producto select a).ToList();
         }
 
@@ -53,10 +54,11 @@ namespace Datos
         }
         public List<Producto> Listar(int precioMenor, int precioMayor)
         {
-            return (from a in te.Producto
-                    where a.precio > precioMenor &
-                        a.precio < precioMayor
-                    select a).ToList();
+            var lista = (from a in te.Producto
+
+                         select a).ToList();
+            lista = lista.Where(a => a.precio > precioMenor & a.precio < precioMayor).ToList();
+            return lista;
         }
     }
 }
