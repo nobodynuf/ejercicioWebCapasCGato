@@ -19,5 +19,17 @@ namespace Datos
             return (from a in te.Venta select a).ToList();
         }
 
+        public int TotalVenta(Venta venta)
+        {
+            var lista = (from a in te.Venta where a.cod_producto == venta.cod_producto select a).ToList();
+            int suma = 0;
+
+            foreach (var item in lista)
+            {
+                suma += item.Producto.precio * item.cantidad;
+            }
+
+            return suma;
+        }
     }
 }

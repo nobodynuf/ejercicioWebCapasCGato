@@ -11,7 +11,7 @@ namespace Negocio
         public int codigo { get; set; }
         public string marca { get; set; }
         public string modelo { get; set; }
-        public string tipo { get; set; }
+        public Tipo tipo { get; set; }
         public int precio { get; set; }
 
         public Producto()

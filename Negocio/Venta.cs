@@ -13,6 +13,7 @@ namespace Negocio
         public string usr_venta { get; set; }
         public int cantidad { get; set; }
         public System.DateTime fecha { get; set; }
+        public int? total { get; set; }
 
         public virtual Producto Producto { get; set; }
         public virtual Usuario Usuario { get; set; }
