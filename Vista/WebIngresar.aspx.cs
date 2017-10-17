@@ -12,6 +12,16 @@ namespace Vista
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+            if (!IsPostBack)
+            {
+                ddlTipo.DataSource = (Enum.GetValues(typeof(Negocio.Tipo))); 
+            }
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
