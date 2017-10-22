@@ -29,5 +29,20 @@ namespace Vista
             }
 
         }
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+            Usuario us = new Usuario() { usuario1 = Login1.UserName, contra = Login1.Password };
+            if (new NegocioUsuario().Autentificar(us))
+            {
+                ((Vista.Session)this.Master).SessionUsuario = us;
+                Response.Redirect("WebNavegacion.aspx");
+            }
+            else
+            {
+                ((Vista.Session)this.Master).MostrarMensaje("No se pudo autentificar, verifique " +
+                    "credenciales");
+            }
+        }
     }
 }

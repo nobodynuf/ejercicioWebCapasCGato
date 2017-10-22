@@ -11,4 +11,5 @@
         <asp:Button ID="btnEnviar" runat="server" Text="Ingresar" OnClick="btnEnviar_Click" />
         
     </div>
+    <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate"></asp:Login>
 </asp:Content>

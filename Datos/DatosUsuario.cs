@@ -15,16 +15,21 @@ namespace Datos
         // R
         public bool Autentificar(Usuario usuario)
         {
-            var resultados = tee.Usuario.FirstOrDefault(
+            using (TiendaElectronicaEntities2 c = new TiendaElectronicaEntities2("data source=LC160332\\SQLEXPRESS;initial catalog=TiendaElectronica;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+            {
+                c.Database.Connection.Open();
+                var resultados = c.Usuario.FirstOrDefault(
                 a => a.usuario1.Equals(usuario.usuario1));
-            if (resultados != null)
-            {
-                return resultados.contra.Equals(usuario.contra);
+                if (resultados != null)
+                {
+                    return resultados.contra.Equals(usuario.contra);
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
-            {
-                return false;
-            }
+            
 
         }
     }
